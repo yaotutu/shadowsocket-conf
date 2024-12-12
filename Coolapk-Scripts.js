@@ -7,3 +7,7 @@ $httpClient.setRequestHeader("Accept", "text/html,application/xhtml+xml,applicat
 
 // 打印修改后的请求头，方便调试
 console.log($request.headers);
+
+// 结束脚本，返回处理后的 body 数据
+// 注意：如果你没有修改 body 内容，应该使用原始的 body 返回
+$done({ body: $response.body });
